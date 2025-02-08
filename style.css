@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+}
+
+body {
+    background-color: #002339;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 10px;
+    width: 400px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #002339;
+    text-decoration: underline;
+    margin: 0.5rem 0;
+}
+
+.search {
+    position: relative;
+    width: 100%;
+    /* margin-left: 2rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search input {
+    font-size: 1.2rem;
+    padding: 10px 50px 10px 20px;
+    width: 80%;
+    outline: none;
+    border: none;
+    background-color: #002339;
+    color: orangered;
+    border-radius: 10px;
+    text-transform: capitalize;
+}
+
+.search i {
+    color: orangered;
+    font-size: 1.5rem;
+    right: 1rem;
+    position: absolute;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+    /* background-color: aqua; */
+    transition: 0.3s;
+}
+
+.search i:active {
+    transform: scale(1.5)
+}
+
+.display {
+    align-items: center;
+    flex-direction: column;
+    margin-block: 20px;
+    display: none;
+}
+
+.display img {
+    margin: 0;
+    width: 60%;
+}
+
+.display-data {
+    text-align: center;
+}
+
+.display-data .temp {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.display-data .description {
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.weather-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 25px 0 0 0;
+}
+
+#humidity,
+#wind-speed {
+    display: flex;
+    align-items: center;
+}
+
+#humidity i {
+    font-size: 2.6rem;
+    margin: 0 5px;
+}
+
+#wind-speed i {
+    font-size: 2.6rem;
+    margin: 0 5px;
+}
+
+.data {
+    margin-left: 0.5rem;
+}
+
+.numdata {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.error {
+    margin-block: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error img {
+    width: 60%;
+}
+
+.errmsg {
+    font-size: 20px;
+    font-weight: 500;
+}
