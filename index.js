@@ -11,14 +11,14 @@ displaydata.prepend(img);
 let error = document.querySelector(".error");
 
 searchbtn.addEventListener("click",()=>{
-    GetWeather(input.value);
+    if (input.value === "") {
+        input.placeholder = "You must write something..."
+    }else{
+        GetWeather(input.value);
+    }
 })
 
 async function GetWeather(value){
-    if (input.value === "") {
-        input.placeholder = "You must write something..."
-    }
-    else {
         try {
             let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${value}&APPID=af8f5159cfb0bb24bda39fedd9ce216d`);
             let data = await res.json()
@@ -69,5 +69,3 @@ async function GetWeather(value){
             console.log(err);
         }
     }
-
-}
